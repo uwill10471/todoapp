@@ -70,12 +70,13 @@ app.get("/:customListName" , (req,res) => {
         items: defaultItems })
         
            list.save();
-    res.redirect("/")
+    res.redirect("/"+ coustomListName);
         
     
    
      }else{
-            res.render("list",{listTitle:foundList.name , newlistItems:foundList.items})
+            res.render("list",{listTitle:foundList.name , newlistItems:foundList.items});
+         
         }
     }
   
