@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 var _ = require('lodash');
 
 
+
 //const date =require(__dirname + "/date.js");
 const app = express();
 
@@ -17,7 +18,7 @@ app.set("view engine","ejs");
 
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static("public"));
-mongoose.connect("mongodb://localhost:27017/todoDB",{
+mongoose.connect("mongodb+srv://uwill:ANSHUSINGH@uwills.wgblkxj.mongodb.net/todoDB",{
         useNewUrlParser: true,
         useUnifiedTopology: true,
       //  useCreateIndex: true,  
